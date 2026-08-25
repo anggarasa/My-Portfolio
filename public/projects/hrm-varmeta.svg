@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <rect width="600" height="380" fill="#000000" rx="12"/>
+  <rect x="40" y="40" width="520" height="300" rx="8" fill="#1f150c" stroke="#412d15" stroke-width="1.5" />
+  <rect x="40" y="40" width="520" height="35" rx="8" fill="#412d15" opacity="0.6"/>
+  <text x="65" y="62" fill="#e1dcc9" font-family="monospace" font-size="11">HALMETA ENTERPRISE HRM PORTAL</text>
+  
+  <rect x="65" y="95" width="140" height="65" rx="6" fill="#000000" stroke="#412d15"/>
+  <text x="80" y="118" fill="#b8af9b" font-family="monospace" font-size="9">ACTIVE WORKERS</text>
+  <text x="80" y="145" fill="#e1dcc9" font-family="sans-serif" font-size="20" font-weight="bold">25,480</text>
+
+  <rect x="220" y="95" width="140" height="65" rx="6" fill="#000000" stroke="#412d15"/>
+  <text x="235" y="118" fill="#b8af9b" font-family="monospace" font-size="9">PAYROLL DISBURSED</text>
+  <text x="235" y="145" fill="#e1dcc9" font-family="sans-serif" font-size="20" font-weight="bold">$4.2M</text>
+
+  <rect x="375" y="95" width="160" height="65" rx="6" fill="#000000" stroke="#412d15"/>
+  <text x="390" y="118" fill="#b8af9b" font-family="monospace" font-size="9">ATTENDANCE RATE</text>
+  <text x="390" y="145" fill="#e1dcc9" font-family="sans-serif" font-size="20" font-weight="bold">98.6%</text>
+
+  <rect x="65" y="175" width="470" height="140" rx="6" fill="#000000" stroke="#412d15"/>
+  <path d="M 85 280 Q 150 220 220 240 T 360 210 T 500 195" fill="none" stroke="#e1dcc9" stroke-width="2.5"/>
+  <path d="M 85 280 Q 150 220 220 240 T 360 210 T 500 195 L 500 300 L 85 300 Z" fill="#412d15" opacity="0.3"/>
+</svg>

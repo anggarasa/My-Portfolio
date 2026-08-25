@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <rect width="600" height="380" fill="#000000" rx="12"/>
+  <rect x="40" y="40" width="520" height="300" rx="8" fill="#1f150c" stroke="#412d15" stroke-width="1.5" />
+  <g transform="translate(300, 190)">
+    <!-- 3D geometric abstract mesh wireframe -->
+    <polygon points="0,-90 70,-40 70,40 0,90 -70,40 -70,-40" fill="none" stroke="#e1dcc9" stroke-width="2"/>
+    <polygon points="0,-90 0,90" fill="none" stroke="#412d15" stroke-width="1.5"/>
+    <polygon points="70,-40 -70,40" fill="none" stroke="#412d15" stroke-width="1.5"/>
+    <polygon points="-70,-40 70,40" fill="none" stroke="#412d15" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="16" fill="#e1dcc9" opacity="0.8"/>
+  </g>
+  <text x="65" y="75" fill="#e1dcc9" font-family="monospace" font-size="12" letter-spacing="1">ANTIGRAVITY / WEBGL PHYSICS ENGINE</text>
+  <text x="65" y="310" fill="#b8af9b" font-family="monospace" font-size="10">60 FPS GPU-ACCELERATED PARTICLES</text>
+</svg>

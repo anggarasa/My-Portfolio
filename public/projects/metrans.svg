@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <rect width="600" height="380" fill="#000000" rx="12"/>
+  <rect x="40" y="40" width="520" height="300" rx="8" fill="#1f150c" stroke="#412d15" stroke-width="1.5" />
+  <text x="65" y="75" fill="#e1dcc9" font-family="monospace" font-size="12" letter-spacing="1">METRANS / REALTIME AI SPEECH ENGINE</text>
+  <g transform="translate(65, 120)">
+    <rect x="0" y="0" width="220" height="150" rx="6" fill="#000000" stroke="#412d15"/>
+    <text x="20" y="30" fill="#b8af9b" font-family="monospace" font-size="9">INPUT AUDIO (ID)</text>
+    <text x="20" y="60" fill="#e1dcc9" font-family="sans-serif" font-size="13">"Selamat datang di era komputasi agen mandiri."</text>
+    
+    <rect x="250" y="0" width="220" height="150" rx="6" fill="#000000" stroke="#412d15"/>
+    <text x="270" y="30" fill="#b8af9b" font-family="monospace" font-size="9">OUTPUT AUDIO (EN)</text>
+    <text x="270" y="60" fill="#e1dcc9" font-family="sans-serif" font-size="13">"Welcome to the era of autonomous agent computing."</text>
+  </g>
+</svg>
