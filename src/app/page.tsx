@@ -4,6 +4,7 @@ import {
   HeroSection,
   MarqueeBanner,
   ProjectsList,
+  Interactive3DView,
   StatementAscii,
   SkillSets,
   ServicesCards,
@@ -25,6 +26,7 @@ export default function HomePage() {
         <HeroSection />
         <MarqueeBanner />
         <ProjectsList />
+        <Interactive3DView />
         <StatementAscii />
         <SkillSets />
         <ServicesCards />

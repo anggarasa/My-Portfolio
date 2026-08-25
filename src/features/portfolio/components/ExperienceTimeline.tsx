@@ -1,10 +1,69 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useRef } from "react";
 import { EXPERIENCES, EDUCATION_HISTORY } from "../data/portfolioData";
 import { Calendar, MapPin, GraduationCap, Briefcase } from "lucide-react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function ExperienceTimeline() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const lineRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const ctx = gsap.context(() => {
+      // Timeline items stagger reveal
+      const cards = sectionRef.current?.querySelectorAll(".timeline-card");
+      if (cards && cards.length > 0) {
+        gsap.from(cards, {
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 75%",
+          },
+          opacity: 0,
+          y: 40,
+          stagger: 0.15,
+          duration: 0.8,
+          ease: "power2.out",
+        });
+      }
+
+      // Growing glow line animation
+      if (lineRef.current) {
+        gsap.fromTo(
+          lineRef.current,
+          { scaleY: 0 },
+          {
+            scaleY: 1,
+            ease: "none",
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "top 70%",
+              end: "bottom 80%",
+              scrub: 0.5,
+            },
+          },
+        );
+      }
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section id="experience" className="py-24 border-t border-border relative">
+    <section ref={sectionRef} id="experience" className="py-24 border-t border-border relative">
+      {/* Dynamic Background Scroll Progress Line */}
+      <div className="hidden lg:block absolute left-8 top-36 bottom-36 w-0.5 bg-border -z-10 origin-top">
+        <div
+          ref={lineRef}
+          className="w-full h-full bg-gradient-to-b from-primary via-primary/80 to-transparent origin-top shadow-[0_0_12px_rgba(225,220,201,0.5)]"
+        />
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -32,7 +91,7 @@ export function ExperienceTimeline() {
             {EXPERIENCES.map((exp) => (
               <div
                 key={exp.id}
-                className="p-6 sm:p-8 rounded-xl bg-card border border-border glow-card transition-all duration-300 hover:border-primary/40 space-y-4"
+                className="timeline-card p-6 sm:p-8 rounded-xl bg-card border border-border glow-card transition-all duration-300 hover:border-primary/40 space-y-4"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-border pb-4">
                   <div className="space-y-1">
@@ -89,7 +148,7 @@ export function ExperienceTimeline() {
             {EDUCATION_HISTORY.map((edu) => (
               <div
                 key={edu.id}
-                className="p-6 sm:p-8 rounded-xl bg-card border border-border glow-card transition-all duration-300 hover:border-primary/40 space-y-4"
+                className="timeline-card p-6 sm:p-8 rounded-xl bg-card border border-border glow-card transition-all duration-300 hover:border-primary/40 space-y-4"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-border pb-4">
                   <div className="space-y-1">

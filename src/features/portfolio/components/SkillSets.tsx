@@ -1,14 +1,43 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { SKILL_CAPABILITIES } from "../data/portfolioData";
 import { ChevronDown } from "lucide-react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function SkillSets() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
+  const sectionRef = useRef<HTMLElement>(null);
+  const listRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const ctx = gsap.context(() => {
+      const items = listRef.current?.querySelectorAll(".skill-item-row");
+      if (items && items.length > 0) {
+        gsap.from(items, {
+          scrollTrigger: {
+            trigger: listRef.current,
+            start: "top 80%",
+          },
+          opacity: 0,
+          x: -25,
+          stagger: 0.08,
+          duration: 0.7,
+          ease: "power2.out",
+        });
+      }
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <section id="about" className="py-24 border-t border-border relative">
+    <section ref={sectionRef} id="about" className="py-24 border-t border-border relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Heading & Philosophy */}
@@ -29,7 +58,7 @@ export function SkillSets() {
                 (DEV® — 2026)
               </div>
               <p>
-                Menghadirkan proses rekayasa perangkat lunak end-to-end yang terintegrasi: mulai dari arsitektur backend RESTful API dengan Node.js & Laravel, antarmuka web interaktif ReactJS/Next.js, hingga aplikasi mobile Flutter yang responsif dan performan.
+                Menghadirkan proses rekayasa perangkat lunak end-to-end yang terintegrasi: mulai dari arsitektur backend RESTful API dengan Node.js & Laravel, antarmuka web interaktif Three.js, ReactJS/Next.js, hingga aplikasi mobile Flutter yang responsif dan performan.
               </p>
             </div>
           </div>
@@ -44,14 +73,14 @@ export function SkillSets() {
               <span>(06 Pilar Keahlian)</span>
             </div>
 
-            <div className="divide-y divide-border">
+            <div ref={listRef} className="divide-y divide-border">
               {SKILL_CAPABILITIES.map((skill, index) => {
                 const isExpanded = expandedIndex === index;
 
                 return (
                   <div
                     key={skill.number}
-                    className="py-5 transition-colors cursor-pointer group"
+                    className="skill-item-row py-5 transition-colors cursor-pointer group"
                     onClick={() => setExpandedIndex(isExpanded ? null : index)}
                   >
                     <div className="flex items-center justify-between">

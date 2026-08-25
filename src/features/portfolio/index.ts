@@ -2,6 +2,7 @@ export * from "./components/Navbar";
 export * from "./components/HeroSection";
 export * from "./components/MarqueeBanner";
 export * from "./components/ProjectsList";
+export * from "./components/Interactive3DView";
 export * from "./components/ProjectModal";
 export * from "./components/StatementAscii";
 export * from "./components/SkillSets";

@@ -8,7 +8,7 @@ interface MarqueeBannerProps {
 }
 
 export function MarqueeBanner({
-  text = "ANGGARA PUTRA © INDONESIA · FULLSTACK SOFTWARE ENGINEER · NEXT.JS ARCHITECT · CREATIVE DEVELOPER · ",
+  text = "ANGGARA SAPUTRA © SUBANG, INDONESIA · FULLSTACK WEB & MOBILE DEVELOPER · THREE.JS & GSAP · FLUTTER ARCHITECT · ",
   speed = "normal",
   reverse = false,
   className = "",
@@ -29,7 +29,10 @@ export function MarqueeBanner({
           <span>{text}</span>
           <span>{text}</span>
         </div>
-        <div className="flex shrink-0 items-center whitespace-nowrap text-xl sm:text-2xl md:text-3xl font-extrabold tracking-wider font-mono text-primary pr-8" aria-hidden="true">
+        <div
+          className="flex shrink-0 items-center whitespace-nowrap text-xl sm:text-2xl md:text-3xl font-extrabold tracking-wider font-mono text-primary pr-8"
+          aria-hidden="true"
+        >
           <span>{text}</span>
           <span>{text}</span>
           <span>{text}</span>
