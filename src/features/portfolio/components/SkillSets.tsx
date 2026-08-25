@@ -14,11 +14,11 @@ export function SkillSets() {
           {/* Left Column: Heading & Philosophy */}
           <div className="lg:col-span-5 space-y-6 sticky top-28">
             <div className="inline-flex items-center gap-2 text-xs font-mono text-muted-foreground uppercase tracking-widest">
-              <span>(Skill sets)</span>
+              <span>(Keahlian Teknis)</span>
             </div>
 
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.05]">
-              Engineering <br />
+              Core <br />
               <span className="text-primary">skill sets</span>
             </h2>
 
@@ -26,10 +26,10 @@ export function SkillSets() {
 
             <div className="space-y-4 text-muted-foreground text-sm sm:text-base leading-relaxed">
               <div className="text-xs font-mono text-primary font-semibold">
-                (ARCH® — 2026)
+                (DEV® — 2026)
               </div>
               <p>
-                I propose an end-to-end engineering and design process spanning scalable frontend architectures, tokenized design systems, and resilient cloud integration with high-standard UI/Visual precision and developer experience.
+                Menghadirkan proses rekayasa perangkat lunak end-to-end yang terintegrasi: mulai dari arsitektur backend RESTful API dengan Node.js & Laravel, antarmuka web interaktif ReactJS/Next.js, hingga aplikasi mobile Flutter yang responsif dan performan.
               </p>
             </div>
           </div>
@@ -38,10 +38,10 @@ export function SkillSets() {
           <div className="lg:col-span-7 space-y-4">
             <div className="flex items-center justify-between pb-4 border-b border-border text-xs font-mono text-muted-foreground">
               <div className="flex items-center gap-2">
-                <span className="text-foreground font-bold text-sm">Capabilities</span>
+                <span className="text-foreground font-bold text-sm">Kapabilitas Utama</span>
                 <span className="w-1.5 h-1.5 rounded-full bg-primary" />
               </div>
-              <span>(06 Core Areas)</span>
+              <span>(06 Pilar Keahlian)</span>
             </div>
 
             <div className="divide-y divide-border">

@@ -6,8 +6,8 @@ import { ProjectsList } from "./ProjectsList";
 describe("ProjectsList Component", () => {
   it("renders projects list and category filter capsules", () => {
     render(<ProjectsList />);
-    expect(screen.getByText(/Selected Works & Case Studies/i)).toBeInTheDocument();
-    expect(screen.getByText(/All Works/i)).toBeInTheDocument();
-    expect(screen.getAllByText(/Enterprise Web Architecture Kit/i).length).toBeGreaterThan(0);
+    expect(screen.getByText(/Proyek Nyata & Studi Kasus/i)).toBeInTheDocument();
+    expect(screen.getByText(/Semua Proyek/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/Proyek Kopdes/i).length).toBeGreaterThan(0);
   });
 });

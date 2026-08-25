@@ -14,8 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Full-Stack & Frontend Engineer Portfolio",
-  description: "Modern Developer Portfolio featuring high-performance web applications, clean architecture, and interactive design.",
+  title: "Anggara Saputra — Fullstack Developer (Web & Mobile)",
+  description:
+    "Portofolio profesional Anggara Saputra — Fullstack Developer berpengalaman dalam merancang dan mengembangkan sistem web end-to-end (Node.js, Express.js, ReactJS, Next.js) serta aplikasi mobile interaktif (Flutter).",
 };
 
 export default function RootLayout({

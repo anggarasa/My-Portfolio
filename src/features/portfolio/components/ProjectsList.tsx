@@ -13,9 +13,24 @@ export function ProjectsList() {
   const { setSelectedProject } = usePortfolioStore();
 
   const filteredProjects = FEATURED_PROJECTS.filter((proj) => {
-    if (filter === "featured") return proj.featured;
-    if (filter === "architecture") return proj.category?.toLowerCase().includes("architecture");
-    if (filter === "ai") return proj.category?.toLowerCase().includes("ai");
+    if (filter === "fullstack") {
+      return (
+        proj.category?.toLowerCase().includes("fullstack") ||
+        proj.category?.toLowerCase().includes("erp")
+      );
+    }
+    if (filter === "mobile") {
+      return (
+        proj.category?.toLowerCase().includes("mobile") ||
+        proj.category?.toLowerCase().includes("flutter")
+      );
+    }
+    if (filter === "govtech") {
+      return (
+        proj.category?.toLowerCase().includes("govtech") ||
+        proj.category?.toLowerCase().includes("e-commerce")
+      );
+    }
     return true;
   });
 
@@ -26,20 +41,20 @@ export function ProjectsList() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="space-y-3">
             <div className="inline-flex items-center gap-2 text-xs font-mono text-muted-foreground uppercase tracking-widest">
-              <span>(Works //)</span>
+              <span>(Selected Works //)</span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-foreground">
-              Selected Works & Case Studies
+              Proyek Nyata & Studi Kasus
             </h2>
           </div>
 
           {/* Filter Capsules */}
           <div className="flex flex-wrap gap-2 text-xs font-mono">
             {[
-              { id: "all", label: "All Works" },
-              { id: "featured", label: "Featured" },
-              { id: "architecture", label: "Architecture" },
-              { id: "ai", label: "AI & SaaS" },
+              { id: "all", label: "Semua Proyek" },
+              { id: "fullstack", label: "Fullstack Web & ERP" },
+              { id: "mobile", label: "Mobile Apps (Flutter)" },
+              { id: "govtech", label: "GovTech & E-Commerce" },
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -99,9 +114,9 @@ export function ProjectsList() {
                   {/* Right: Year + Category + Arrow */}
                   <div className="flex items-center gap-3 sm:gap-6 shrink-0 font-mono text-xs text-muted-foreground">
                     <span className="hidden sm:inline-block px-2.5 py-1 rounded bg-secondary/80 text-[11px] border border-border">
-                      {project.category || "Project"}
+                      {project.category || "Proyek"}
                     </span>
-                    <span>{project.year || "2026"}</span>
+                    <span>{project.year || "2025 – 2026"}</span>
                     <div
                       className={`w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 ${
                         isActive
@@ -176,7 +191,7 @@ export function ProjectsList() {
                     )}
                   </div>
                   <div className="pt-2 flex items-center gap-1.5 text-xs font-mono text-primary font-semibold">
-                    <span>Click to view detailed case study</span>
+                    <span>Klik untuk melihat studi kasus & spesifikasi</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />
                   </div>
                 </div>

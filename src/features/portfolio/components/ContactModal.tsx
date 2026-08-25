@@ -33,7 +33,7 @@ export function ContactModal() {
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
-      projectType: "Fullstack Web App",
+      projectType: "Fullstack Web App (Node.js / React)",
     },
   });
 
@@ -60,10 +60,10 @@ export function ContactModal() {
             <span>Initiate Collaboration</span>
           </div>
           <DialogTitle className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground">
-            Let&apos;s build something bold together.
+            Mari wujudkan solusi digital Anda.
           </DialogTitle>
           <DialogDescription className="text-sm text-muted-foreground">
-            Have a project in mind or looking for technical leadership? Send a message and I&apos;ll get back within 24 hours.
+            Punya ide proyek web/mobile, sistem POS/ERP, atau kebutuhan rekayasa software? Kirimkan pesan dan saya akan merespon dalam 24 jam.
           </DialogDescription>
         </DialogHeader>
 
@@ -72,26 +72,26 @@ export function ContactModal() {
             <div className="w-12 h-12 rounded-full bg-secondary text-primary mx-auto flex items-center justify-center border border-border">
               <CheckCircle2 className="w-6 h-6" />
             </div>
-            <h4 className="text-xl font-bold text-foreground">Message Sent Successfully!</h4>
+            <h4 className="text-xl font-bold text-foreground">Pesan Berhasil Terkirim!</h4>
             <p className="text-sm text-muted-foreground max-w-sm mx-auto">
-              Thank you for reaching out. I&apos;ll review your project details and reply promptly.
+              Terima kasih telah menghubungi. Saya akan meninjau detail proyek Anda dan membalasnya sesegera mungkin.
             </p>
             <Button
               onClick={handleClose}
               className="rounded-full px-6 bg-primary text-primary-foreground text-xs font-mono"
             >
-              Done
+              Selesai
             </Button>
           </div>
         ) : (
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 pt-2">
             <div className="space-y-1.5">
               <Label htmlFor="name" className="text-xs font-mono text-foreground">
-                Your Name
+                Nama Lengkap
               </Label>
               <Input
                 id="name"
-                placeholder="John Doe"
+                placeholder="Nama Anda"
                 {...register("name")}
                 className="bg-background border-border text-foreground text-sm"
               />
@@ -102,12 +102,12 @@ export function ContactModal() {
 
             <div className="space-y-1.5">
               <Label htmlFor="email" className="text-xs font-mono text-foreground">
-                Email Address
+                Alamat Email
               </Label>
               <Input
                 id="email"
                 type="email"
-                placeholder="john@example.com"
+                placeholder="nama@email.com"
                 {...register("email")}
                 className="bg-background border-border text-foreground text-sm"
               />
@@ -118,28 +118,29 @@ export function ContactModal() {
 
             <div className="space-y-1.5">
               <Label htmlFor="projectType" className="text-xs font-mono text-foreground">
-                Project Scope / Subject
+                Kategori Proyek / Kebutuhan
               </Label>
               <select
                 id="projectType"
                 {...register("projectType")}
                 className="w-full h-9 rounded-md border border-border bg-background px-3 py-1 text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-ring"
               >
-                <option value="Fullstack Web App">Fullstack Web App</option>
-                <option value="Next.js Frontend Architecture">Next.js Frontend Architecture</option>
-                <option value="Design System & UI Kit">Design System & UI Kit</option>
-                <option value="Consulting & Audit">Technical Consulting & Audit</option>
+                <option value="Fullstack Web App (Node.js / React)">Fullstack Web App (Node.js / React)</option>
+                <option value="Mobile App (Flutter & Dart)">Mobile App (Flutter & Dart)</option>
+                <option value="POS & ERP System Development">POS & ERP System Development</option>
+                <option value="API & Database Architecture">API & Database Architecture</option>
+                <option value="UI/UX Slicing & Consulting">UI/UX Slicing & Consulting</option>
               </select>
             </div>
 
             <div className="space-y-1.5">
               <Label htmlFor="message" className="text-xs font-mono text-foreground">
-                Project Details
+                Detail Proyek
               </Label>
               <textarea
                 id="message"
                 rows={4}
-                placeholder="Tell me about your goals, timelines, and technical requirements..."
+                placeholder="Jelaskan kebutuhan, ruang lingkup, dan ekspektasi waktu proyek Anda..."
                 {...register("message")}
                 className="w-full rounded-md border border-border bg-background p-3 text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-ring resize-none"
               />
@@ -154,7 +155,7 @@ export function ContactModal() {
                 onClick={handleClose}
                 className="text-xs font-mono text-muted-foreground hover:text-foreground"
               >
-                Cancel
+                Batal
               </button>
               <Button
                 type="submit"
@@ -162,10 +163,10 @@ export function ContactModal() {
                 className="rounded-full px-6 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-xs font-mono inline-flex items-center gap-2"
               >
                 {isSubmitting ? (
-                  <span>Sending...</span>
+                  <span>Mengirim...</span>
                 ) : (
                   <>
-                    <span>Send Message</span>
+                    <span>Kirim Pesan</span>
                     <Send className="w-3.5 h-3.5" />
                   </>
                 )}
