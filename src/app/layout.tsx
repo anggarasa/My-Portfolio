@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo_Black, Work_Sans, Space_Mono } from "next/font/google";
+import { SmoothScrollProvider } from "@/shared/components/scroll/SmoothScrollProvider";
 import "./globals.css";
 
 const archivoBlack = Archivo_Black({
@@ -76,7 +77,7 @@ export default function RootLayout({
       className={`${archivoBlack.variable} ${workSans.variable} ${spaceMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground selection:bg-primary selection:text-primary-foreground font-sans">
-        {children}
+        <SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>
     </html>
   );

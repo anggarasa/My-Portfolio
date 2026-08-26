@@ -5,10 +5,12 @@ import { ProjectsSection } from "@/features/projects/ProjectsSection";
 import { SkillsSection } from "@/features/skills/SkillsSection";
 import { AboutSection } from "@/features/about/AboutSection";
 import { ContactSection } from "@/features/contact/ContactSection";
+import { AnimationInit } from "@/shared/components/animation/AnimationInit";
 
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-[#FAFAFA] text-[#0A0A0A]">
+      <AnimationInit />
       <Header />
       <main className="flex-1">
         <HeroSection />

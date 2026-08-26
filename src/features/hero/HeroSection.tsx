@@ -4,6 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import { PROFILE } from "@/shared/constants/profile";
 import { Button } from "@/shared/components/ui/Button";
+import { EditorialWireframe3D } from "@/shared/components/3d/EditorialWireframe3D";
 import { ArrowDown } from "lucide-react";
 
 export function HeroSection() {
@@ -14,7 +15,7 @@ export function HeroSection() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Headline Masthead */}
-        <div className="border-b-2 border-[#0A0A0A] pb-6 mb-8 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+        <div className="border-b-2 border-[#0A0A0A] pb-6 mb-8 flex flex-col md:flex-row md:items-end md:justify-between gap-4 gsap-hero-title">
           <div>
             <div className="flex items-center space-x-2 mb-2">
               <span className="bg-[#EF4444] text-[#FAFAFA] text-[10px] font-bold uppercase tracking-[0.15em] px-2 py-0.5 font-mono">
@@ -46,8 +47,8 @@ export function HeroSection() {
 
         {/* Lead Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          {/* Main Editorial Lede */}
-          <div className="lg:col-span-8 space-y-6">
+          {/* Main Editorial Lede (Left Column) */}
+          <div className="lg:col-span-7 space-y-6 gsap-reveal">
             <p className="font-body text-xl sm:text-2xl text-[#0A0A0A] leading-snug font-normal">
               Membangun sistem perangkat lunak yang{" "}
               <strong className="font-bold underline decoration-[#EF4444] decoration-4">
@@ -91,52 +92,58 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right Column: Fact Matrix & Dossier */}
-          <div className="lg:col-span-4 border-2 border-[#0A0A0A] bg-[#FAFAFA] p-6 space-y-6">
-            <div className="border-b-2 border-[#0A0A0A] pb-3 flex items-center justify-between">
-              <span className="font-display text-sm uppercase tracking-wider text-[#0A0A0A]">
-                DOSSIER RINGKAS
-              </span>
-              <span className="font-mono text-[11px] text-[#EF4444] font-bold">REF #2026-AS</span>
-            </div>
+          {/* Right Column: 3D Interactive Canvas + Fact Matrix */}
+          <div className="lg:col-span-5 space-y-6 gsap-reveal">
+            {/* 3D Three.js Sculpture */}
+            <EditorialWireframe3D />
 
-            {/* Quick Metrics */}
-            <div className="space-y-4">
-              {PROFILE.stats.map((stat, idx) => (
-                <div key={idx} className="border-b border-[#E5E5E5] pb-3 last:border-b-0">
-                  <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#525252] block font-body">
-                    {stat.label}
-                  </span>
-                  <span className="font-display text-xl sm:text-2xl text-[#0A0A0A] block mt-0.5">
-                    {stat.value}
-                  </span>
-                </div>
-              ))}
-            </div>
+            {/* Dossier Card */}
+            <div className="border-2 border-[#0A0A0A] bg-[#FAFAFA] p-6 space-y-6">
+              <div className="border-b-2 border-[#0A0A0A] pb-3 flex items-center justify-between">
+                <span className="font-display text-sm uppercase tracking-wider text-[#0A0A0A]">
+                  DOSSIER RINGKAS
+                </span>
+                <span className="font-mono text-[11px] text-[#EF4444] font-bold">REF #2026-AS</span>
+              </div>
 
-            {/* Quick Badges */}
-            <div className="pt-2 border-t-2 border-[#0A0A0A]">
-              <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#525252] block mb-2 font-mono">
-                CORE ARSENAL
-              </span>
-              <div className="flex flex-wrap gap-1.5">
-                {[
-                  "NODE.JS",
-                  "EXPRESS",
-                  "FLUTTER",
-                  "REACT",
-                  "NEXT.JS",
-                  "POSTGRESQL",
-                  "LARAVEL",
-                  "TYPESCRIPT",
-                ].map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-2 py-0.5 bg-[#0A0A0A] text-[#FAFAFA] text-[10px] font-bold font-mono tracking-wider"
-                  >
-                    {tech}
-                  </span>
+              {/* Quick Metrics */}
+              <div className="grid grid-cols-2 gap-4">
+                {PROFILE.stats.map((stat, idx) => (
+                  <div key={idx} className="border-b border-[#E5E5E5] pb-2 last:border-b-0">
+                    <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#525252] block font-body">
+                      {stat.label}
+                    </span>
+                    <span className="font-display text-lg sm:text-xl text-[#0A0A0A] block mt-0.5">
+                      {stat.value}
+                    </span>
+                  </div>
                 ))}
+              </div>
+
+              {/* Quick Badges */}
+              <div className="pt-2 border-t-2 border-[#0A0A0A]">
+                <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#525252] block mb-2 font-mono">
+                  CORE ARSENAL
+                </span>
+                <div className="flex flex-wrap gap-1.5">
+                  {[
+                    "NODE.JS",
+                    "EXPRESS",
+                    "FLUTTER",
+                    "REACT",
+                    "NEXT.JS",
+                    "POSTGRESQL",
+                    "LARAVEL",
+                    "TYPESCRIPT",
+                  ].map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-2 py-0.5 bg-[#0A0A0A] text-[#FAFAFA] text-[10px] font-bold font-mono tracking-wider"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

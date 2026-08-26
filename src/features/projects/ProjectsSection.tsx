@@ -76,7 +76,7 @@ export function ProjectsSection() {
             <Card
               key={project.id}
               variant="elevated"
-              className="flex flex-col justify-between group"
+              className="flex flex-col justify-between group gsap-card-stagger"
             >
               <div>
                 <CardHeader>
