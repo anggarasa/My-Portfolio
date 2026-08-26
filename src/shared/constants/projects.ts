@@ -1,0 +1,130 @@
+import { Project } from "@/types";
+
+export const PROJECTS: Project[] = [
+  {
+    id: "kopdes-pos-erp",
+    title: "Proyek Kopdes",
+    tagline: "Point of Sale (POS) & Enterprise Resource Planning (ERP) Berbasis Web",
+    category: "WEB",
+    categoryLabel: "WEB APPLICATION // FULLSTACK",
+    year: "2024 - 2025",
+    overview:
+      "Sistem manajemen operasional dan transaksi komprehensif untuk unit koperasi dan toko retail. Mengintegrasikan pencatatan kasir real-time, manajemen inventori bertingkat, laporan keuangan laba-rugi otomatis, dan kontrol akses multi-role (Kasir, Manajer, Superadmin).",
+    challenges: [
+      "Menjamin akurasi kalkulasi stok barang secara bersamaan saat transaksi kasir berjalan paralel.",
+      "Mengoptimalkan query database PostgreSQL untuk pelaporan neraca keuangan bulanan dalam volume data ribuan transaksi.",
+      "Mendesain antarmuka POS yang responsif, cepat diakses dengan shortcut keyboard, dan minim latensi.",
+    ],
+    keyFeatures: [
+      "Kasir POS cepat dengan pemindaian barcode & cetak struk thermal.",
+      "Manajemen master produk, varian harga grosir/eceran, dan alert stok menipis.",
+      "Laporan akuntansi otomatis: Jurnal umum, buku besar, neraca saldo, dan laba rugi.",
+      "Audit trail aktivitas user dan pembatasan hak akses berjenjang.",
+    ],
+    technologies: [
+      "Node.js",
+      "Express.js",
+      "ReactJS",
+      "TypeScript",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Zustand",
+      "RESTful API",
+    ],
+    architecture: {
+      client: "Single Page Application (SPA) ReactJS dengan State Management Zustand",
+      server: "Node.js + Express.js REST API dengan arsitektur Controller-Service-Repository",
+      database: "PostgreSQL dengan relasi relasional ACID & indexing performa tinggi",
+      deployment: "Linux VPS, PM2 Process Manager, Nginx Reverse Proxy",
+    },
+    metrics: [
+      { label: "Modul ERP", value: "6 Sub-Sistem" },
+      { label: "Integritas Data", value: "ACID Compliant" },
+      { label: "Waktu Transaksi Kasir", value: "< 2 Detik" },
+    ],
+    isFeatured: true,
+  },
+  {
+    id: "smartdigi-superapp",
+    title: "Proyek Smartdigi",
+    tagline: "Super App Antarmuka Pelayanan Publik Pemerintah Kabupaten Subang",
+    category: "MOBILE",
+    categoryLabel: "MOBILE APPLICATION // GOVTECH",
+    year: "2024",
+    overview:
+      "Aplikasi mobile multi-layanan publik terpadu yang dirancang untuk menghubungkan warga Kabupaten Subang dengan berbagai dinas pemerintah daerah. Menghadirkan portal pengaduan aspirasi warga, informasi layanan perizinan, pemantauan status berkas, dan berita resmi daerah dalam satu antarmuka modern yang ramah pengguna.",
+    challenges: [
+      "Mengintegrasikan beragam endpoint API dinas dengan format respon yang bervariasi menjadi struktur data seragam di aplikasi.",
+      "Memastikan navigasi aplikasi tetap lancar pada berbagai spesifikasi perangkat Android dari kelas entry-level hingga flagship.",
+      "Menyediakan sistem caching offline-first untuk modul informasi publik agar tetap dapat diakses saat koneksi internet lemah.",
+    ],
+    keyFeatures: [
+      "Modul Layanan Aspirasi Warga dengan upload lampiran foto bukti & tracking tiket laporan.",
+      "Katalog informasi izin usaha dan kependudukan dengan panduan interaktif.",
+      "Integrasi push notification darurat daerah dan pengumuman dinas resmi.",
+      "Desain antarmuka modular sesuai identitas visual daerah dan standar aksesibilitas ramah lansia.",
+    ],
+    technologies: [
+      "Flutter",
+      "Dart",
+      "Provider / BLoC",
+      "REST API",
+      "Dio HTTP Client",
+      "SQLite / Hive Storage",
+      "Google Maps API",
+    ],
+    architecture: {
+      client: "Flutter Cross-Platform Mobile Application (Android & iOS)",
+      server: "Microservices Government Backend API Gateway",
+      database: "Local Hive/SQLite cache untuk mode offline & sinkronisasi data",
+      deployment: "Android APK & Play Console Testing Distribution",
+    },
+    metrics: [
+      { label: "Cakupan Layanan", value: "5+ Dinas Terintegrasi" },
+      { label: "Arsitektur", value: "Clean Architecture Flutter" },
+      { label: "Performa UI", value: "60 FPS Smooth Flow" },
+    ],
+    isFeatured: true,
+  },
+  {
+    id: "e-rapet-ecommerce",
+    title: "Proyek E-Rapet",
+    tagline: "Aplikasi Mobile E-Commerce Produk dan Perawatan Hewan Peliharaan",
+    category: "MOBILE",
+    categoryLabel: "MOBILE APPLICATION // E-COMMERCE",
+    year: "2024",
+    overview:
+      "Platform mobile belanja kebutuhan hewan peliharaan (makanan, vitamin, aksesoris, serta booking layanan grooming). Dilengkapi dengan katalog produk terfilter berdasarkan jenis hewan, keranjang belanja interaktif, kalkulasi ongkos kirim, dan riwayat pesanan real-time.",
+    challenges: [
+      "Mengelola alur state keranjang belanja (cart state) yang dinamis dengan validasi ketersediaan stok real-time.",
+      "Membangun pengalaman checkout multi-step yang mulus tanpa kehilangan data input saat navigasi.",
+      "Menerapkan optimasi rendering gambar produk beresolusi tinggi dengan caching memori yang efisien.",
+    ],
+    keyFeatures: [
+      "Katalog pintar berfilter (Kucing, Anjing, Burung, Ikan, dll) dengan live search.",
+      "Keranjang belanja interaktif dengan opsi voucher promo dan catatan penjual.",
+      "Modul booking jadwal grooming dan konsultasi dokter hewan.",
+      "Status pelacakan pesanan step-by-step dari konfirmasi hingga kurir tiba.",
+    ],
+    technologies: [
+      "Flutter",
+      "Dart",
+      "State Management",
+      "RESTful API Integration",
+      "Cached Network Image",
+      "SharedPreferences",
+    ],
+    architecture: {
+      client: "Flutter Mobile UI dengan pola pemisahan View-Controller-Model",
+      server: "E-Commerce REST API Backend",
+      database: "Local Preferences Cache & Remote Database",
+      deployment: "Android Build Distribution",
+    },
+    metrics: [
+      { label: "Kategori Produk", value: "8+ Spesies Hewan" },
+      { label: "Alur Checkout", value: "3 Langkah Cepat" },
+      { label: "Kecepatan Render", value: "Instan dengan Memory Cache" },
+    ],
+    isFeatured: true,
+  },
+];
