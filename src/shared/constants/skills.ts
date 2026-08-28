@@ -69,42 +69,42 @@ export const SKILLS: SkillItem[] = [
 
 export const TIMELINE: ExperienceTimeline[] = [
   {
-    year: "2025",
+    year: "Mei 2025",
     title: "Kelulusan Rekayasa Perangkat Lunak (RPL)",
     organization: "SMK Al-Intisab Patokbeusi",
     type: "EDUCATION",
     description:
-      "Menyelesaikan pendidikan kejuruan formal dengan fokus mendalam pada algoritma pemrograman, rekayasa web, database relasional, dan aplikasi mobile.",
+      "Menyelesaikan pendidikan formal kejuruan dengan spesialisasi Rekayasa Perangkat Lunak, memperdalam dasar algoritma pemrograman, rekayasa web & mobile, serta manajemen database relasional.",
     bullets: [
-      "Fokus spesialisasi: Fullstack Web Development & Mobile Engineering.",
-      "Mengerjakan serangkaian proyek aplikasi riil berbasis tim dan individu.",
-      "Menguasai standar industri dalam version control Git dan clean coding.",
+      "Fokus spesialisasi: Rekayasa Perangkat Lunak, Fullstack Web & Mobile Engineering.",
+      "Pondasi logika algoritma, database relasional ACID, dan prinsip Clean Architecture.",
+      "Penyelesaian kurikulum berbasis proyek kejuruan riil dan standar industri.",
     ],
   },
   {
-    year: "2026",
-    title: "Lead Web Developer — Diehard Escape (Arena Uji Nyali)",
-    organization: "Platform Reservasi & Showcase Teater Horor Bogor",
-    type: "PROJECT",
+    year: "Jun - Des 2025",
+    title: "FullStack Engineer",
+    organization: "PT Zen Multimedia Indonesia",
+    type: "WORK",
     description:
-      "Merancang dan mengembangkan platform web interaktif untuk reservasi tiket, katalog film teater, serta sistem informasi wahana di diehardescape.com.",
+      "Bertanggung jawab dalam perancangan dan pengembangan aplikasi web end-to-end, integrasi RESTful API, perancangan basis data relasional, dan optimalisasi kinerja platform multimedia klien.",
     bullets: [
-      "Membangun antarmuka Next.js modern, responsif, dan berperforma tinggi dengan tema horor sinematik.",
-      "Mengimplementasikan katalog wahana berfilter dan alur registrasi pengunjung.",
-      "Mengintegrasikan alur customer care langsung via WhatsApp dan panduan keselamatan medis.",
+      "Merancang arsitektur backend REST API yang scalable, modular, dan secure.",
+      "Mengembangkan antarmuka frontend yang responsif, interaktif, dan optimal di berbagai perangkat.",
+      "Kolaborasi tim dalam deployment server, optimasi query database, dan code review berkala.",
     ],
   },
   {
-    year: "2025 - 2026",
-    title: "Fullstack & Mobile Developer — Smartdigi & YM Wedding Studio",
-    organization: "Aplikasi Publik Daerah & Platform Web Editorial",
-    type: "PROJECT",
+    year: "2026 - Sekarang",
+    title: "Freelance Web & Mobile Developer",
+    organization: "Independent Contractor / Digital Solutions",
+    type: "WORK",
     description:
-      "Mengembangkan aplikasi mobile Flutter untuk layanan aspirasi publik daerah Kab. Subang serta platform web editorial kurasi paket pernikahan di ymwedding.id.",
+      "Menyediakan jasa konsultasi teknis, perancangan arsitektur, dan rekayasa solusi perangkat lunak mandiri untuk kebutuhan aplikasi web modern dan mobile lintas platform.",
     bullets: [
-      "Membangun UI Flutter 60fps dengan kepatuhan standar aksesibilitas publik.",
-      "Mengembangkan website editorial pernikahan modern dengan integrasi katalog paket bertingkat.",
-      "Menerapkan SEO terstruktur, lazy loading media, dan alur booking konsultasi instan.",
+      "Membangun solusi web modern (Next.js, React, Node.js, Laravel) & mobile lintas platform (Flutter).",
+      "Menyelesaikan proyek klien: sistem tiket Diehard Escape, super-app publik Smartdigi, dan web editorial YM Wedding Studio.",
+      "Mengelola siklus SDLC mandiri dari perancangan arsitektur, testing, SEO, hingga cloud deployment.",
     ],
   },
 ];

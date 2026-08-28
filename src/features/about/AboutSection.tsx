@@ -136,7 +136,7 @@ export function AboutSection() {
                   LINIMASA REKAM JEJAK
                 </span>
                 <span className="font-mono text-[10px] text-[#525252] font-bold">
-                  2024 - SEKARANG
+                  2025 - SEKARANG
                 </span>
               </div>
 
