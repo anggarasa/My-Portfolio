@@ -211,3 +211,21 @@
 .animate-ticker:hover {
   animation-play-state: paused;
 }
+
+/* VoiceBox Editorial Modal Scrollbar */
+[data-lenis-prevent]::-webkit-scrollbar {
+  width: 6px;
+}
+
+[data-lenis-prevent]::-webkit-scrollbar-track {
+  background: var(--surface);
+  border-left: 1px solid var(--border-medium);
+}
+
+[data-lenis-prevent]::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+
+[data-lenis-prevent]::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}

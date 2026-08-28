@@ -153,25 +153,25 @@ export function HeroSection() {
       {/* Marquee / Ticker Tape */}
       <div className="mt-14 w-full bg-[#0A0A0A] text-[#FAFAFA] border-y-2 border-[#0A0A0A] py-2.5 overflow-hidden">
         <div className="animate-ticker font-mono text-xs font-bold uppercase tracking-[0.15em] flex items-center space-x-8">
-          <span>PROYEK KOPDES // POS & ERP MULTI-ROLE</span>
+          <span>DIEHARD ESCAPE // HORROR THEATER & TICKETING WEB</span>
           <span className="text-[#EF4444]">✦</span>
           <span>PROYEK SMARTDIGI // SUPER APP PEMKAB SUBANG</span>
           <span className="text-[#EF4444]">✦</span>
-          <span>PROYEK E-RAPET // FLUTTER E-COMMERCE</span>
+          <span>YM WEDDING STUDIO // EDITORIAL WEDDING SERVICES</span>
           <span className="text-[#EF4444]">✦</span>
           <span>SMK AL-INTISAB PATOKBEUSI RPL 2025</span>
           <span className="text-[#EF4444]">✦</span>
-          <span>NODE.JS • REACT • FLUTTER • LARAVEL • POSTGRESQL</span>
+          <span>NEXT.JS • REACT • FLUTTER • TYPESCRIPT • NODE.JS</span>
           <span className="text-[#EF4444]">✦</span>
-          <span>PROYEK KOPDES // POS & ERP MULTI-ROLE</span>
+          <span>DIEHARD ESCAPE // HORROR THEATER & TICKETING WEB</span>
           <span className="text-[#EF4444]">✦</span>
           <span>PROYEK SMARTDIGI // SUPER APP PEMKAB SUBANG</span>
           <span className="text-[#EF4444]">✦</span>
-          <span>PROYEK E-RAPET // FLUTTER E-COMMERCE</span>
+          <span>YM WEDDING STUDIO // EDITORIAL WEDDING SERVICES</span>
           <span className="text-[#EF4444]">✦</span>
           <span>SMK AL-INTISAB PATOKBEUSI RPL 2025</span>
           <span className="text-[#EF4444]">✦</span>
-          <span>NODE.JS • REACT • FLUTTER • LARAVEL • POSTGRESQL</span>
+          <span>NEXT.JS • REACT • FLUTTER • TYPESCRIPT • NODE.JS</span>
         </div>
       </div>
     </section>

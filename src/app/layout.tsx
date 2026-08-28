@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ANGGARA SAPUTRA — Fullstack Web & Mobile Developer",
     description:
-      "Portofolio editorial resmi karya engineering Anggara Saputra: Proyek Kopdes POS/ERP, Smartdigi Super App Subang, dan E-Rapet Mobile Store.",
+      "Portofolio editorial resmi karya engineering Anggara Saputra: Diehard Escape Web Booking, Smartdigi Super App Subang, dan YM Wedding Studio Platform.",
     type: "website",
     locale: "id_ID",
     siteName: "VoiceBox Portfolio — Anggara Saputra",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ANGGARA SAPUTRA — Fullstack Developer",
     description:
-      "Portofolio editorial resmi karya engineering Anggara Saputra: Proyek Kopdes POS/ERP, Smartdigi Super App Subang, dan E-Rapet Mobile Store.",
+      "Portofolio editorial resmi karya engineering Anggara Saputra: Diehard Escape Web Booking, Smartdigi Super App Subang, dan YM Wedding Studio Platform.",
   },
 };
 

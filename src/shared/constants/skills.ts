@@ -82,29 +82,29 @@ export const TIMELINE: ExperienceTimeline[] = [
     ],
   },
   {
-    year: "2024 - 2025",
-    title: "Lead Fullstack Developer — Proyek Kopdes (ERP & POS)",
-    organization: "Proyek Sistem Enterprise Koperasi",
+    year: "2026",
+    title: "Lead Web Developer — Diehard Escape (Arena Uji Nyali)",
+    organization: "Platform Reservasi & Showcase Teater Horor Bogor",
     type: "PROJECT",
     description:
-      "Merancang dan membangun sistem point of sale dan enterprise resource planning berbasis web dari nol hingga tahap uji coba operasional.",
+      "Merancang dan mengembangkan platform web interaktif untuk reservasi tiket, katalog film teater, serta sistem informasi wahana di diehardescape.com.",
     bullets: [
-      "Mengembangkan backend RESTful API Node.js/Express terintegrasi database PostgreSQL.",
-      "Membangun antarmuka kasir cepat dan dasbor analitik laporan laba-rugi di ReactJS.",
-      "Menerapkan sistem kontrol hak akses berbasis peran (RBAC) dan audit log transaksi.",
+      "Membangun antarmuka Next.js modern, responsif, dan berperforma tinggi dengan tema horor sinematik.",
+      "Mengimplementasikan katalog wahana berfilter dan alur registrasi pengunjung.",
+      "Mengintegrasikan alur customer care langsung via WhatsApp dan panduan keselamatan medis.",
     ],
   },
   {
-    year: "2024",
-    title: "Mobile App Developer — Smartdigi & E-Rapet",
-    organization: "Proyek Inovasi Aplikasi Publik & Komersial",
+    year: "2025 - 2026",
+    title: "Fullstack & Mobile Developer — Smartdigi & YM Wedding Studio",
+    organization: "Aplikasi Publik Daerah & Platform Web Editorial",
     type: "PROJECT",
     description:
-      "Mengembangkan antarmuka aplikasi mobile Flutter untuk layanan aspirasi publik daerah dan aplikasi toko online hewan peliharaan.",
+      "Mengembangkan aplikasi mobile Flutter untuk layanan aspirasi publik daerah Kab. Subang serta platform web editorial kurasi paket pernikahan di ymwedding.id.",
     bullets: [
-      "Merancang UI responsif 60fps dengan kepatuhan terhadap pedoman desain Android modern.",
-      "Mengintegrasikan REST API dinas daerah dan modul katalog produk e-commerce.",
-      "Menerapkan state management terstruktur dan sistem penyimpanan lokal offline-first.",
+      "Membangun UI Flutter 60fps dengan kepatuhan standar aksesibilitas publik.",
+      "Mengembangkan website editorial pernikahan modern dengan integrasi katalog paket bertingkat.",
+      "Menerapkan SEO terstruktur, lazy loading media, dan alur booking konsultasi instan.",
     ],
   },
 ];

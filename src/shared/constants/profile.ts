@@ -11,7 +11,7 @@ export const PROFILE = {
   headline:
     "Membangun sistem web & mobile tangguh dengan presisi arsitektural dan performa tinggi.",
   subheadline:
-    "Lulusan Rekayasa Perangkat Lunak (RPL) SMK Al-Intisab Patokbeusi (2025) dengan rekam jejak nyata membangun ERP/POS, aplikasi mobile pemerintahan, dan e-commerce.",
+    "Lulusan Rekayasa Perangkat Lunak (RPL) SMK Al-Intisab Patokbeusi (2025) dengan rekam jejak nyata membangun platform reservasi web, aplikasi mobile pemerintahan daerah, dan platform editorial komersial.",
   status: "TERSEDIA UNTUK PELUANG KERJA & PROYEK",
   edition: "VOL. 2026 // EDISI DIGITAL",
   stats: [

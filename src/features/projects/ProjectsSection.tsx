@@ -13,7 +13,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/shared/components/ui/Dialog";
-import { ArrowUpRight, CheckCircle2, Layers } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, Layers, ExternalLink } from "lucide-react";
 
 export function ProjectsSection() {
   const [selectedCategory, setSelectedCategory] = React.useState<ProjectCategory>("ALL");
@@ -43,7 +43,7 @@ export function ProjectsSection() {
             </h2>
             <p className="text-sm sm:text-base text-[#525252] mt-2 max-w-2xl font-body">
               Koleksi sistem perangkat lunak yang dirancang dan dibangun untuk menyelesaikan problem
-              operasional nyata di sektor enterprise, pemerintahan, dan e-commerce.
+              operasional nyata di sektor enterprise, pemerintahan, hiburan, dan jasa editorial.
             </p>
           </div>
 
@@ -136,16 +136,27 @@ export function ProjectsSection() {
                 </CardContent>
               </div>
 
-              <CardFooter className="flex items-center justify-between">
+              <CardFooter className="flex items-center justify-between gap-2">
                 <Button
                   variant="primary"
                   size="sm"
                   onClick={() => setActiveProject(project)}
-                  className="w-full text-xs"
+                  className="flex-1 text-xs"
                 >
                   <span>BEDAH SPESIFIKASI</span>
                   <ArrowUpRight className="ml-1.5 h-3.5 w-3.5" />
                 </Button>
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Buka website ${project.title} di tab baru`}
+                    className="p-2 bg-[#FAFAFA] text-[#0A0A0A] border-2 border-[#0A0A0A] hover:bg-[#EF4444] hover:text-[#FAFAFA] hover:border-[#EF4444] transition-colors flex items-center justify-center"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                )}
               </CardFooter>
             </Card>
           ))}
@@ -162,7 +173,7 @@ export function ProjectsSection() {
         {activeProject && (
           <DialogContent className="max-w-3xl">
             <DialogHeader>
-              <div className="flex items-center space-x-2">
+              <div className="flex flex-wrap items-center gap-2">
                 <span className="bg-[#EF4444] text-[#FAFAFA] px-2 py-0.5 text-[10px] font-mono font-bold uppercase tracking-wider">
                   {activeProject.categoryLabel}
                 </span>
@@ -174,6 +185,21 @@ export function ProjectsSection() {
               <DialogDescription className="text-sm font-bold text-[#0A0A0A] uppercase tracking-wider">
                 {activeProject.tagline}
               </DialogDescription>
+              {activeProject.liveUrl && (
+                <div className="pt-2">
+                  <a
+                    href={activeProject.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-[#0A0A0A] text-[#FAFAFA] hover:bg-[#EF4444] text-xs font-mono font-bold uppercase tracking-wider transition-colors border-2 border-[#0A0A0A]"
+                  >
+                    <span>
+                      KUNJUNGI SITUS LIVE ({activeProject.liveUrl.replace(/^https?:\/\//, "")})
+                    </span>
+                    <ExternalLink className="h-3.5 w-3.5 ml-1" />
+                  </a>
+                </div>
+              )}
             </DialogHeader>
 
             <div className="space-y-6 pt-2 font-body text-[#0A0A0A]">
