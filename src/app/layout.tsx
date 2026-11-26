@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo_Black, Work_Sans, Space_Mono } from "next/font/google";
-import { headers } from "next/headers";
 import { SmoothScrollProvider } from "@/shared/components/scroll/SmoothScrollProvider";
 import "./globals.css";
 
@@ -67,20 +66,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Membaca nonce dari header mengaktifkan mekanisme Next.js untuk
-  // menyisipkan atribut nonce ke seluruh script yang dirender (chunk & inline),
-  // sesuai CSP strict-dynamic yang dipasang di middleware.ts
-  const nonce = (await headers()).get("x-nonce") ?? undefined;
-
   return (
     <html
       lang="id"
-      data-csp-nonce={nonce}
       className={`${archivoBlack.variable} ${workSans.variable} ${spaceMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground selection:bg-primary selection:text-primary-foreground font-sans">
