@@ -26,7 +26,7 @@ FROM nginxinc/nginx-unprivileged:1.27-alpine AS runner
 
 ENV PORT=8080
 
-COPY --from=builder --chown=nginx:nginx /app/out /usr/share/nginx/html
+COPY --from=builder --chown=nginx:nginx /app/out /app/out
 COPY --chown=nginx:nginx nginx/default.conf.template /etc/nginx/templates/default.conf.template
 
 USER nginx

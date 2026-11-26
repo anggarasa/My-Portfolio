@@ -2,7 +2,7 @@ server {
     listen ${PORT};
     server_name _;
 
-    root /usr/share/nginx/html;
+    root /app/out;
     index index.html;
 
     # Kompresi gzip untuk mempercepat pengiriman aset statis
